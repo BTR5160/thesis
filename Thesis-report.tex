@@ -44,9 +44,11 @@
 %% --- Texte ---
 \usepackage{fancybox}
 \usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage{calc}
+\usepackage{eurosym}
 
 %% --- Headers ---
 \usepackage{mychapter,mymacros}
@@ -133,7 +135,7 @@
 \include{Chapitres/Chapitre5}
 \include{Chapitres/Conclusion}
 
-\printbibliography[nottype=online, title=Bibliographie]
-\printbibliography[type=online, title=Webographie}
+\printbibliography[nottype=online,title={Bibliographie}]
+\printbibliography[type=online,title={Webographie}]
 
 \end{document}
