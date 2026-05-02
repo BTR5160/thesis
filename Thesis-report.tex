@@ -1,0 +1,139 @@
+\documentclass[11pt,titlepage,a4paper,oneside]{book}
+
+%% --- Encodage et langue ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[french]{babel}
+\usepackage[babel=true]{csquotes}
+
+%% --- Mise en page ---
+\usepackage[a4paper, top=25mm, bottom=25mm, left=35mm, right=25mm]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{microtype}
+\emergencystretch=2em
+
+%% --- Mathématiques ---
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\everymath{\displaystyle}
+
+%% --- Graphiques ---
+\usepackage{graphicx}
+\usepackage{overpic}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{epsfig}
+\graphicspath{{figures/}}
+
+%% --- Tableaux ---
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{rotate}
+\setlength\belowcaptionskip{0.25cm}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,positioning,shapes.geometric}
+
+%% --- Texte ---
+\usepackage{fancybox}
+\usepackage{tcolorbox}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{calc}
+
+%% --- Headers ---
+\usepackage{mychapter,mymacros}
+\input{PhS_Header}
+
+%% --- TOC ---
+\usepackage{minitoc}
+\dominitoc
+\setcounter{minitocdepth}{2}
+
+%% --- Algo ---
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+
+%% --- Bibliographie ---
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{Thesis-report.bib}
+\addbibresource{webographie.bib}
+
+%% --- PDF ---
+\usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage{pdfpages}
+
+%% --- IMPORTANT (corrigé) ---
+\usepackage{tikz}
+\usepackage{fontawesome5}
+
+%% --- Couleurs ---
+\definecolor{grisclair}{gray}{0.2}
+\definecolor{light-gary}{gray}{0.95}
+\definecolor{lgray}{gray}{0.85}
+\definecolor{gris}{gray}{0.45}
+
+%% --- Environnements ---
+\newtheorem{exmp}{Example}[section]
+\newenvironment{remarque}{\textbf{Remarque :}}{}
+\newlength{\longueurequation}
+\newlength{\longueurrestante}
+
+\newcommand{\me}[1]{%
+  \longueurrestante=\linegoal%
+  \settowidth{\longueurequation}{$#1$}%
+  \ifthenelse{\longueurequation>\longueurrestante}%
+    {\begin{displaymath}#1\end{displaymath}}{$#1$}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\includepdf{Chapitres/Page_garde_BC.pdf}
+\thispagestyle{empty}
+
+\include{Chapitres/Declaration}
+\thispagestyle{empty}
+
+\include{Chapitres/dedication}
+\thispagestyle{empty}
+
+\include{Chapitres/Acknowledgements}
+\thispagestyle{empty}
+
+\include{Chapitres/Abstract}
+
+\pagestyle{headings}
+
+\pagenumbering{roman}
+\tableofcontents
+\listoftables
+\thispagestyle{empty}
+\listoffigures
+\thispagestyle{empty}
+
+\include{Chapitres/Notations}
+
+\pagenumbering{arabic}
+
+\include{Chapitres/Introduction}
+\include{Chapitres/Chapitre1}
+\include{Chapitres/Chapitre2}
+\include{Chapitres/Chapitre3}
+\include{Chapitres/Chapitre4}
+\include{Chapitres/Chapitre5}
+\include{Chapitres/Conclusion}
+
+\printbibliography[nottype=online, title=Bibliographie]
+\printbibliography[type=online, title=Webographie}
+
+\end{document}

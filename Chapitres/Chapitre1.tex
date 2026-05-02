@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Titre du chapitre}
+\label{Chapitre1}
+\addtocontents{mtc}{\protect\renewcommand{\protect\insertminitoc}{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{sec:Introduction1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Ce premier chapitre .... 
+
+Voilà un exemple de citation à partir de la webographie \cite{stackoverflow:latex} et un exemple de citation à partir de la bibliographe \cite{Severson2019}.
+
+\begin{tcolorbox}[
+   title=Important,
+   colback=blue!5,
+   colframe=blue!75,
+   coltitle=white,
+   fonttitle=\bfseries
+]
+L'introduction d'un chapitre doit suivre la structure suivante :
+
+1. Introduction générale du contexte
+   \begin{itemize}
+      \item Présentation du domaine général
+      \item Contextualisation du sujet
+   \end{itemize}
+
+2. Introduction spécifique du chapitre
+   \begin{itemize}
+      \item Présentation des concepts clés
+      \item Énoncé de la problématique spécifique
+   \end{itemize}
+
+3. Plan du chapitre
+   \begin{itemize}
+      \item Présentation des différentes sections
+      \item Annonce de la structure et de la progression logique
+   \end{itemize}
+   \textbf{Note:} Respectez cette stucture pour les introductions de tous vos chapitres.
+\end{tcolorbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Présentation de l'établissement d'accueil}
+\label{scetion1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Fournir une brève présentation de l'établissement d'accueil.
+
+La Figure \ref{fig_ESEN} présente le logo de l'ESEN. Comme pour toute figure dans ce document, une description détaillée et une référence explicite sont nécessaires pour guider le lecteur dans sa compréhension.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ESEN.png}
+    \caption{Logo de l'ESEN}
+    \label{fig_ESEN}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Section 2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Remarque:} Vous pouvez générer les tableaux avec \href{https://www.tablesgenerator.com/}{tablesgenerator.com}.
+
+\begin{table}[H]
+\centering
+\caption{Titre du tableay}
+\label{tab1}
+\begin{tabular}{|p{3cm}|p{8cm}|}
+\hline
+\textbf{Colonne 1} & \textbf{Colonne 2} \\
+\hline
+Texte & Texte \\
+\hline
+\dots & \dots \\
+\hline
+\end{tabular}
+\label{tab:ventes}
+\end{table}
+\begin{tcolorbox}[
+   title=Important,
+   colback=blue!5,
+   colframe=blue!75,
+   coltitle=white,
+   fonttitle=\bfseries
+]
+Dans la rédaction de votre document, il est essentiel de respecter les conventions suivantes :
+\begin{itemize}
+   \item Chaque tableau et figure doit être décrit et référencé explicitement dans le texte
+   \item Évitez les expressions imprécises comme ``ci-dessous'' ou ``ci-dessus''
+   \item Utilisez toujours la commande \verb|\ref{}| pour faire référence aux éléments, par exemple :
+   \begin{quote}
+              \textit{``Comme le montre la Figure 1.1 (avec la commande \backslash ref\{\}),\hspace{0.2cm}les\hspace{0.2cm}résultats\hspace{0.2cm}indiquent...''}}
+       
+       \textit{``Les données présentées dans le Tableau~i,j démontrent...''}
+   \end{quote}
+
+   \item Cette pratique permet une navigation plus claire et facilite la lecture du document
+\end{itemize}
+\end{tcolorbox}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sous-section 1}
+\dots
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sous-section 2}
+\dots
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Section 3}
+\dots
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+N'oubliez pas de conclure vos chapitres et de faire le lien avec le chapitre suivant.
